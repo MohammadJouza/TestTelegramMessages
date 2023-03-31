@@ -61,19 +61,35 @@
   </style>
 </head>
 
-
-
-
-
 <body>
 
-  <h3>Messages</h3>
-  <!-- <script src="./messagesFile.js"></script> -->
-  <!-- <script src="./1000Messages.js"></script> -->
-  <script src="./arrFile2.js"></script>
+  <h3>Render Messages</h3>
+  <br>
+  <p>
+    file_1: from 0      to 40000 <br> 
+    file_2: from 40000  to 80000 <br>
+    file_3: from 80000  to 120000 <br>
+    file_4: from 120000 to 163000 <br>
+  </p>
+  <br>
 
+  <script src="./files/file_1.js"></script>
+  <script src="./files/file_2.js"></script>
+  <script src="./files/file_3.js"></script>
+  <script src="./files/file_4.js"></script>
 
-  <button id="renderBtn">Render Massages (CLICK ONLY AFTER THE LOADING IS FINISHED)</button>
+  <!-- <script src="./test100Messages.js"></script> -->
+
+  <p><b>CLICK ONLY AFTER THE LOADING IS FINISHED</b></p>
+  <br>
+  <button id="renderBtn">Render Massages From </button>
+
+  <select name="" id="fileName">
+    <option value="file_1">file_1</option>
+    <option value="file_2">file_2</option>
+    <option value="file_3">file_3</option>
+    <option value="file_4">file_4</option>
+  </select>
 
   <div id="allMessages"></div>
 
