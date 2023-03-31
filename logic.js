@@ -480,21 +480,33 @@ const allMessagesDiv = $("#allMessages");
 
 const fileName = $("#fileName");
 
+let toggle=true
+
+const color={
+  true:"green",
+  false:"blue"
+}
+
 renderBtn.on("click", function () {
   console.log("Clicked");
   // messagesArray called arr
   // renderMessages(arr);
   allMessagesDiv.empty()
-  
+  toggle=!toggle
   renderBtn.attr('disabled',true)
+
+  setTimeout(()=>{
+    renderBtn.attr('disabled',false)
+  },5000)
+
   renderBtn.css({backgroundColor:'red'})
 
   const selectedFileArray=eval(fileName.val())
   console.log("selectedFileArray",selectedFileArray)
   renderMessages(selectedFileArray);
 
-  renderBtn.attr('disabled',false)
-  renderBtn.css({backgroundColor:'green'})
+
+  renderBtn.css({backgroundColor:color[toggle]})
 
   // renderMessages(test100Messages);
   // getAllUsersNames(arr);
