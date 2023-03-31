@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telegram</title>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      margin: 0px
+    }
+
+    #allMessages {}
+
+    #message {
+      border: 2px red solid;
+      margin-bottom: 10px;
+      display: grid;
+      grid-auto-columns: auto auto auto auto;
+      color: white;
+      text-align: center;
+      font-size: 10px;
+    }
+
+    #message-text {
+      font-weight: bold;
+      font-size: 20px;
+      color: black;
+      grid-column: 1/5;
+      grid-row: 1;
+      text-align: left;
+      padding: 5px;
+    }
+
+    #message-id {
+      background-color: black;
+      font-weight: bold;
+      grid-column: 1/2;
+    }
+
+    #message-date {
+      background-color: gray;
+      grid-column: 2/3;
+    }
+
+    #message-from {
+      grid-column: 3/4;
+      background-color: blue;
+    }
+
+    #message-replayTo {
+      grid-column: 4/5;
+      background-color: green;
+    }
+  </style>
+</head>
+
+
+
+
+
+<body>
+
+  <h3>Messages</h3>
+  <!-- <script src="./messagesFile.js"></script> -->
+  <script src="./1000Messages.js"></script>
+
+
+  <button id="renderBtn">Render Massages (CLICK ONLY AFTER THE LOADING IS FINISHED)</button>
+
+  <div id="allMessages"></div>
+
+  <script src="./logic.js"></script>
+</body>
+
+</html>
