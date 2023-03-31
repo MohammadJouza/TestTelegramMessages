@@ -328,7 +328,9 @@ const allMessagesDiv = $("#allMessages");
 renderBtn.on("click", function () {
   console.log("Clicked");
   // messagesArray called arr
-  renderMessages(arr);
+  // renderMessages(arr);
+  renderMessages(arrFile2);
+  
   // getAllUsersNames(arr);
 });
 
